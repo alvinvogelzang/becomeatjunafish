@@ -1,0 +1,1 @@
+BecomeTjunaFish.ApplicationAdapter = DS.FixtureAdapter;
