@@ -1,22 +1,26 @@
-BecomeTjunaFish.Course = DS.Model.extend({
+BecomeTjunaFish.Courses = DS.Model.extend({
   title: DS.attr('string'),
-  isCompleted: DS.attr('boolean')
+  img: DS.attr('string'),
+  link: DS.attr('string')
 });
 
-BecomeTjunaFish.Course.FIXTURES = [
+BecomeTjunaFish.Courses.FIXTURES = [
   {
     id: 1,
     title: 'Tjuna Basis',
-    isCompleted: true
+    img: 'http://placehold.it/200x200',
+    link: '#/basis_cursus'
   },
   {
     id: 2,
     title: 'Tjuna Frontend',
-    isCompleted: false
+    img: 'http://placehold.it/200x200',
+    link: '#/frontend_cursus'
   },
   {
     id: 3,
     title: 'Tjuna Backend',
-    isCompleted: false
+    img: 'http://placehold.it/200x200',
+    link: '#/backend_cursus'
   }
 ];
