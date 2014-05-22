@@ -1,31 +1,37 @@
-BecomeTjunaFish.Lesson = DS.Model.extend({
+BecomeTjunaFish.Lessons = DS.Model.extend({
   title: DS.attr('string'),
   progress: DS.attr(),
-  url: DS.attr('string'),
-  course_id: DS.attr(),
-  courses: DS.belongsTo('BecomeTjunaFish.Courses')
+  lesson_url: DS.attr('string'),
+  course: DS.belongsTo('Course', {async: true})
 });
 
-BecomeTjunaFish.Lesson.FIXTURES = [
+BecomeTjunaFish.Lessons.FIXTURES = [
   {
     id: 1,
     title: 'HTML Basis',
     progress: 0,
-    url: 'html_basis_les',
-    course_id: 1
+    lesson_url: 'html_basis_les',
+    course: 1
   },
   {
     id: 2,
     title: 'CSS Basis',
     progress: 0,
-    url: 'css_basis_les',
-    course_id: 1
+    lesson_url: 'css_basis_les',
+    course: 1
   },
   {
     id: 3,
     title: 'Conventies',
     progress: 0,
-    url: 'conventies_les',
-    course_id: 1
+    lesson_url: 'css_basis_les',
+    course: 1
+  },
+  {
+    id: 4,
+    title: 'Bugtracker',
+    progress: 0,
+    lesson_url: 'css_basis_les',
+    course: 1
   }
 ];

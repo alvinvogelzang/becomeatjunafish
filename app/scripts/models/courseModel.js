@@ -1,13 +1,14 @@
-BecomeTjunaFish.Courses = DS.Model.extend({
+BecomeTjunaFish.Course = DS.Model.extend({
   title: DS.attr('string'),
   img: DS.attr('string'),
   goal: DS.attr('string'),
   targetGroup: DS.attr('string'),
   prerequisites: DS.attr('string'),
-  url: DS.attr('string')
+  url: DS.attr('string'),
+  lessons: DS.hasMany('Lessons', {async: true})
 });
 
-BecomeTjunaFish.Courses.FIXTURES = [
+BecomeTjunaFish.Course.FIXTURES = [
   {
     id: 1,
     title: 'Tjuna Basis',
@@ -15,7 +16,8 @@ BecomeTjunaFish.Courses.FIXTURES = [
     goal: 'kunnen werken met de basis tools en opmaaktalen die Tjuna gebruikt',
     targetGroup: 'frontend developers in wording',
     prerequisites: 'geen',
-    url: 'basis_cursus'
+    url: 'basis_cursus',
+    lessons: [1,2, 3, 4]
   },
   {
     id: 2,
@@ -24,7 +26,8 @@ BecomeTjunaFish.Courses.FIXTURES = [
     goal: '',
     targetGroup: '',
     prerequisites: '',
-    url: 'frontend_cursus'
+    url: 'frontend_cursus',
+    lessons: [2,3]
   },
   {
     id: 3,
@@ -36,5 +39,7 @@ BecomeTjunaFish.Courses.FIXTURES = [
     url: 'backend_cursus'
   }
 ];
+
+
 
 
