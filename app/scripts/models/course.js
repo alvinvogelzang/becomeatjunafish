@@ -5,7 +5,7 @@ BecomeTjunaFish.Course = DS.Model.extend({
   targetGroup: DS.attr('string'),
   prerequisites: DS.attr('string'),
   url: DS.attr('string'),
-  lessons: DS.hasMany('Lessons', {async: true})
+  lessons: DS.hasMany('Lesson', {async: true})
 });
 
 BecomeTjunaFish.Course.FIXTURES = [

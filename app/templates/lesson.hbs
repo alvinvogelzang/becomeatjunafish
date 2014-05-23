@@ -1,1 +1,18 @@
-<h1>{{title}}</h1>
+<div class="row">
+	<h1>{{title}}</h1>
+</div>
+
+<div class="row courseGoal">
+	<p>Doel van deze les: {{goal}}</p>
+	<p>De les is gericht op: {{targetGroup}}</p>
+	<p>Dit is de voorkennis die voor deze les nodig is: {{prerequisites}}</p>
+</div>
+
+<div class="row">
+	{{#each topics}}
+	<div class="col-md-3">
+		<h2>{{title}}</h2>
+		{{#link-to "topic" this}}{{title}}{{/link-to}}
+	</div>
+	{{/each}}
+</div>
