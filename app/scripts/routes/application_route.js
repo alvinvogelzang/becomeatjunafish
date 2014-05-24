@@ -1,6 +1,4 @@
 BecomeTjunaFish.IndexRoute = Ember.Route.extend({
-    // admittedly, this should be in IndexRoute and not in the
-    // top level ApplicationRoute; we're in transition... :-)
     model: function () {
         return this.store.find('course');
     }
@@ -8,28 +6,44 @@ BecomeTjunaFish.IndexRoute = Ember.Route.extend({
 });
 
 BecomeTjunaFish.CourseRoute = Ember.Route.extend({
-    // admittedly, this should be in IndexRoute and not in the
-    // top level ApplicationRoute; we're in transition... :-)
     model: function (params) {
-        return this.store.find('course', params.id);
+        return this.store.find('course', params.course_id);
+    }
+
+});
+
+BecomeTjunaFish.CourseIndexRoute = Ember.Route.extend({
+   model: function () {
+      return this.modelFor("course");
+   },
+   renderTemplate: function() {
+       this.render('course', { into: 'application'})
     }
 
 });
 
 BecomeTjunaFish.LessonRoute = Ember.Route.extend({
-    // admittedly, this should be in IndexRoute and not in the
-    // top level ApplicationRoute; we're in transition... :-)
     model: function (params) {
-        return this.store.find('lesson', params.id);
+        return this.store.find('lesson', params.lesson_id);
     }
 
 });
 
+BecomeTjunaFish.LessonIndexRoute = Ember.Route.extend({
+   model: function () {
+      return this.modelFor("lesson");
+   },
+   renderTemplate: function() {
+       this.render('lesson', { into: 'application'})
+    }
+});
+
 BecomeTjunaFish.TopicRoute = Ember.Route.extend({
-    // admittedly, this should be in IndexRoute and not in the
-    // top level ApplicationRoute; we're in transition... :-)
     model: function (params) {
-        return this.store.find('topic', params.id);
+        return this.store.find('topic', params.topic_id);
+    },
+    renderTemplate: function() {
+        this.render('topic', { into: 'application'})
     }
 
 });
