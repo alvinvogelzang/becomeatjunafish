@@ -1,4 +1,239 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Luckiest+Guy);
+@import url(http://fonts.googleapis.com/css?family=Coming+Soon);
+
 /* Put your CSS here */
 html, body {
-    margin: 30px 0;
+	margin: 0;
+    color: #FFF;
+    background-image: url('../images/blackboard_1.jpg');
+    background-size: 1920px;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
 }
+
+	h1 {
+		color: #FFF;
+		font-size: 48px;
+		}
+
+	h2 { font-size: 28px;}
+
+	h3 { font-size: 18px; font-family: 'Coming Soon', cursive;}
+
+	.tjunaGreen {color: #008c9e;}
+
+	.intro p {
+	    font-size: 20px;
+	    text-align: center;
+	    width: 500px;
+	    margin: 0 auto;
+	    line-height: 2;
+	    font-weight: lighter;
+	    font-family: 'Coming Soon', cursive;
+	}
+
+	.default-btn {
+		background-color: #008c9e;
+		color: #FFF;
+		width: 150px;
+		padding: 9px;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		border-bottom: 5px solid #006666;
+		text-decoration: none;
+		font-size: 14px;
+		margin: 0 auto;
+		display: block;
+		margin-top: 30px;
+		font-family: 'Coming Soon', cursive;
+	}
+
+	.default-btn:hover {
+		background-color: #0096a9;
+	}
+
+	.mainNav {
+		background-color: #008c9e;
+		height: 50px;
+		width: 100%;
+		box-sizing: border-box;
+		position: relative;
+		top: 0;
+		box-shadow: 5px 5px 5px #000;
+	}
+
+		.backBtn {
+			border: none;
+			color: #FFF;
+			width: 100px;
+			height: 100%;
+			display: block;
+			float: left;
+			background-color: rgba(255,255,255, 0.15);
+		}
+
+		a.logo { display: block; margin: 0 auto; width: 200px; color: #FFF; text-decoration: none;}
+
+		ul.dropDown {
+			margin: 0;
+			margin-right: 100px;
+			width: 130px;
+			font-size: 14px;
+			font-weight: lighter;
+			position: absolute;
+			right: 0;
+		}
+
+			a.dropdown-toggle {
+				height: 50px;
+				line-height: 50px;
+				color: #FFF;
+				text-decoration: none;
+				float: right;
+				padding: 0 10px;
+				transition: background-color 0.2s ease;
+				cursor: pointer;
+			}
+
+			.dropdown-toggle:hover {
+				background-color: rgba(255,255,255, 0.15);
+			}
+
+			.fa-chevron-up {
+				display: none;
+			}
+
+			ul.menuItems {
+    			padding: 0;
+    			display: none;
+			}
+
+			.dropDown li {
+				list-style-type: none;
+			}
+
+				.menuItems li {
+				    float: left;
+				    width: 100%;
+				    transition: background-color 0.2s ease;
+				}
+
+				.menuItems li:hover {
+					background-color: #FFF;
+				}
+
+				.menuItems a {
+					text-decoration: none;
+					background-color: rgba(0,102,102, 0.9);
+					color: #FFF;
+					padding: 10px;
+					display: block;
+					text-align: center;
+				}
+
+	.container { 
+		overflow: auto;	
+		width: 100%;
+		height: 100%;
+		padding: 20px 50px 70px 50px;
+		box-sizing: border-box;
+	}
+
+		.intro {
+			width: 900px;
+			margin: 0 auto;
+			margin-bottom: 80px;
+		}
+
+			.intro h1, .introCourses h1 { text-align: center; text-shadow: 5px 5px 5px #000;}
+
+			.intro img { 
+				margin: 0 auto; 
+				display: block; 
+				width: 150px; 
+				margin-top: 80px; 
+				margin-bottom: 80px;
+			}
+
+		.introCourses {
+			width: 900px;
+			margin: 0 auto;
+		}
+
+			.introCourseColumn {
+				width: 300px;
+				float: left;
+				height: 250px;
+				margin-top: 30px;
+			}
+
+				.introCourseColumn img {
+					display: block;
+					margin: 0 auto;
+				}
+
+		.courseGoal { margin-bottom: 50px; font-weight: lighter;}
+
+			.courseGoal p {font-family: 'Coming Soon', cursive;}
+
+		.lessonColumn { width: 250px; float: left; background-color: rgba(0,0,0, .4); margin-right: 20px; padding: 20px; box-sizing: border-box; border-radius: 5px;}
+
+			.lessonColumn h3 {color: #FFF;text-align: center;margin-top: 0;}
+
+			.progressCircle { width: 120px; margin: 0 auto; margin-top: 40px; margin-bottom: 40px;}
+
+
+		.topicRow {
+			width: 600px;
+			height: 70px;
+			background-color: rgba(0,0,0, .4);
+			box-sizing: border-box;
+			margin-bottom: 20px;
+		}
+
+			.topicRow h3 { text-align: center; line-height: 70px; margin: 0; position: relative;}
+
+			.topicRow h3 a { color: #FFF; text-decoration: none; display: block;}
+
+			.topicRow:hover {background-color: rgba(0, 140, 158, 1);transition: background-color 0.2s ease;}
+
+
+			i.fa.fa-chevron-right {
+				position: absolute;
+				top: 0;
+				right: 20px;
+				line-height: 70px;
+				height: 70px;
+				font-size: 25px;
+			}
+
+		@-webkit-keyframes spaceboots {
+			0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+			10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+			20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+			30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+			40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+			50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+			60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+			70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+			80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+			90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+			100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+		}
+		.shake.hover{
+			-webkit-animation-name: spaceboots;
+			-webkit-animation-duration: 0.8s;
+			-webkit-transform-origin:50% 50%;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+		}
+		.shake {
+			display:inline-block
+		}
+
+
+
+
+
