@@ -15,7 +15,7 @@
     "trailing": false,
     "smarttabs": true,
     "globals": {
-        "BecomeTjunaFish": true,
+        "BecomeTjunaFish2": true,
         "jQuery": true,
         "Ember": true,
         "Handlebars": true,
