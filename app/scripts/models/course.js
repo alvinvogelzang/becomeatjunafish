@@ -12,7 +12,7 @@ BecomeTjunaFish.Course.FIXTURES = [
   {
     id: 1,
     title: 'Tjuna Basis',
-    img: 'http://placehold.it/200x200',
+    img: '/images/frontend_fish.png',
     goal: 'kunnen werken met de basis tools en opmaaktalen die Tjuna gebruikt',
     targetGroup: 'frontend developers in wording',
     prerequisites: 'geen',
@@ -22,7 +22,7 @@ BecomeTjunaFish.Course.FIXTURES = [
   {
     id: 2,
     title: 'Tjuna Frontend',
-    img: 'http://placehold.it/200x200',
+    img: '/images/frontend_fish.png',
     goal: '',
     targetGroup: '',
     prerequisites: '',
@@ -32,7 +32,7 @@ BecomeTjunaFish.Course.FIXTURES = [
   {
     id: 3,
     title: 'Tjuna Backend',
-    img: 'http://placehold.it/200x200',
+    img: '/images/backend_fish.png',
     goal: '',
     targetGroup: '',
     prerequisites: '',

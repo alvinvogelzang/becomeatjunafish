@@ -10,9 +10,20 @@
 
 <div class="row">
 	{{#each topics}}
-	<div class="col-md-3">
+	<div class="col-xs-3">
 		<h2>{{title}}</h2>
 		{{#link-to "topic" this}}{{title}}{{/link-to}}
 	</div>
 	{{/each}}
 </div>
+
+<div class="row">
+	{{#each assignments}}
+	<div class="col-xs-3">
+		<h2>{{title}}</h2>
+		{{#link-to "assignment" this}}{{title}}{{/link-to}}
+	</div>
+	{{/each}}
+</div>
+
+<button {{action "alert"}}>Next</button> 

@@ -6,7 +6,8 @@ BecomeTjunaFish.Lesson = DS.Model.extend({
   prerequisites: DS.attr('string'),
   lesson_url: DS.attr('string'),
   course: DS.belongsTo('Course', {async: true}),
-  topics: DS.hasMany('Topic', {async: true})
+  topics: DS.hasMany('Topic', {async: true}),
+  assignments: DS.hasMany('Assignment', {async: true})
 });
 
 BecomeTjunaFish.Lesson.FIXTURES = [
@@ -19,7 +20,8 @@ BecomeTjunaFish.Lesson.FIXTURES = [
     prerequisites: 'geen',
     lesson_url: 'html_basis_les',
     course: 1,
-    topics: [1,2, 3, 4]
+    topics: [1,2, 3, 4],
+    assignments: [1]
   },
   {
     id: 2,
