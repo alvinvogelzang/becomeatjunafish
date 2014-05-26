@@ -1,4 +1,9 @@
-var BecomeTjunaFish2 = window.BecomeTjunaFish2 = Ember.Application.create();
+var BecomeTjunaFish = window.BecomeTjunaFish = Ember.Application.create({
+	LOG_TRANSITIONS: true,
+	LOG_TRANSITIONS_INTERNAL: true
+}); 
+
+BecomeTjunaFish.ApplicationAdapter = DS.FixtureAdapter.extend();
 
 /* Order and include as you please. */
 require('scripts/controllers/*');
