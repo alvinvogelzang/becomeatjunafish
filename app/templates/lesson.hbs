@@ -1,6 +1,5 @@
-<div class="row">
-	<h1>{{title}}</h1>
-</div>
+<h1>{{title}} Les</h1>
+
 
 <div class="row courseGoal">
 	<p>Doel van deze les: {{goal}}</p>
@@ -8,22 +7,19 @@
 	<p>Dit is de voorkennis die voor deze les nodig is: {{prerequisites}}</p>
 </div>
 
-<div class="row">
-	{{#each topics}}
-	<div class="col-xs-3">
-		<h2>{{title}}</h2>
-		{{#link-to "topic" this}}{{title}}{{/link-to}}
+<h2>De topics</h2>
+	
+{{#each topics}}
+	<div class="topicRow">
+		<h3>{{#link-to "topic" this}}{{title}}{{/link-to}}<i class="fa fa-chevron-right"></i></h3>
 	</div>
-	{{/each}}
-</div>
+{{/each}}
 
-<div class="row">
-	{{#each assignments}}
-	<div class="col-xs-3">
-		<h2>{{title}}</h2>
-		{{#link-to "assignment" this}}{{title}}{{/link-to}}
-	</div>
-	{{/each}}
-</div>
+<h2>De opdracht</h2>
 
-<button {{action "alert"}}>Next</button> 
+{{#each assignments}}
+<div class="assignmentRow">
+	<h3>{{title}}</h3>
+	{{#link-to "assignment" this}}{{title}}{{/link-to}}
+</div>
+{{/each}}
