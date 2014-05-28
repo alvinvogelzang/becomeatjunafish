@@ -28,22 +28,6 @@ BecomeTjunaFish.LessonRoute = Ember.Route.extend({
 
 });
 
-Ember.Route.reopen({
-  getParentRoute: function(){
-    var route = this;
-    var handlerInfos = route.router.router.currentHandlerInfos;
-    var parent, current;
-
-    for (var i=0, l=handlerInfos.length; i<l; i++) {
-      current = handlerInfos[i].handler;
-      if((current.routeName == route.routeName)||(current.routeName.match(/./) && current.routeName.split('.')[1] == route.routeName )){
-        return parent.routeName;
-      }
-      parent = current;
-    }
-  }
-})
-
 BecomeTjunaFish.LessonIndexRoute = Ember.Route.extend({
    model: function () {
       return this.modelFor("lesson");
@@ -52,6 +36,7 @@ BecomeTjunaFish.LessonIndexRoute = Ember.Route.extend({
        this.render('lesson', { into: 'application'})
     }
 });
+
 BecomeTjunaFish.TopicRoute = Ember.Route.extend({
     model: function (params) {
         return this.store.find('topic', params.topic_id);
@@ -62,18 +47,6 @@ BecomeTjunaFish.TopicRoute = Ember.Route.extend({
 
 });
 
-BecomeTjunaFish.TopicController = Ember.ObjectController.extend({
-  needs: ['lesson'],
-  
-    actions: {
-        nextPost: function(){
-        var posts = this.get('model');
-        console.log(posts);
-        }
-    }
-   
-     
-});
 
 BecomeTjunaFish.AssignmentRoute = Ember.Route.extend({
     model: function (params) {

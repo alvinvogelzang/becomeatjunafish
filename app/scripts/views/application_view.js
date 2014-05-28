@@ -1,16 +1,16 @@
 BecomeTjunaFish.ApplicationView = Ember.View.extend({
   didInsertElement : function(){
     this._super();
-	$('.dropdown-toggle').on('click', function(){
+	$('.dropDown').hover(function(){
 		$('ul.menuItems').toggle();
 		$('.fa-chevron-down').toggle();
 		$('.fa-chevron-up').toggle();
 	});
 	$( ".default-btn" ).hover(
 	  function() {
-	    $(this).parent('.introCourseColumn').find('.shake').addClass( "hover" );
+	    $(this).parent('.introCourseColumn').find('.shake').addClass("hover");
 	  }, function() {
-	    $(this).parent('.introCourseColumn').find('.shake').removeClass( "hover" );
+	    $(this).parent('.introCourseColumn').find('.shake').removeClass("hover");
 	  });
   }
 });
@@ -21,11 +21,11 @@ BecomeTjunaFish.IndexView = BecomeTjunaFish.CourseView = BecomeTjunaFish.LessonV
     },
 
     animateIn : function (done) {
-        this.$().fadeTo(100, 1, done);
+        this.$().fadeTo(300, 1, done);
     },
 
     animateOut : function (done) {
-        this.$().fadeTo(100, 0, done);
+        this.$().fadeTo(300, 0, done);
     }
 });
 
@@ -47,5 +47,17 @@ BecomeTjunaFish.CourseProgressView = Ember.View.extend({
         'tickColorizeValues': true
     });
     }
+});
+
+BecomeTjunaFish.LessonView = Ember.View.extend({
+	didInsertElement: function (){
+		this._super();
+		var userProgress = this.get('controller.model.progress');
+		console.log(userProgress);
+		$("#progressbar" ).progressbar({
+	      value: userProgress
+	    });
+	}
+
 });
 
