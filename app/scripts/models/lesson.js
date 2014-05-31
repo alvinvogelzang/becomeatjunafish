@@ -1,6 +1,6 @@
 BecomeTjunaFish.Lesson = DS.Model.extend({
   title: DS.attr('string'),
-  progress: DS.attr(),
+  progress: DS.attr('number'),
   goal: DS.attr('string'),
   targetGroup: DS.attr('string'),
   prerequisites: DS.attr('string'),
