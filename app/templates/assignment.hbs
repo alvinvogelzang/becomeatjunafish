@@ -1,1 +1,27 @@
-<h1>Opdracht</h1>
+<div class="container">
+	<div class="topicColumn">
+		<h2>{{title}}</h2>
+		<p class="intro">{{intro}}</p>
+
+		<div class="assignmentInstructions">
+			<h2>Instructies</h2>
+			<ol>
+			{{#each instructions}}
+					<li>{{title}}</li>
+			{{/each}}
+			</ol>
+		</div>
+
+		<div class="assignmentUpload">
+			<h2>Uploaden voor feedback</h2>
+			<p>Comprimeer je opdracht in een zip-bestand en upload het voor feedback.</p>
+			<form class="custom-upload">
+				<input type="file"/>
+				<div class="fake-file">
+			        <input disabled="disabled" >
+			    </div>
+				<input type="submit" class="uploadBtn" value="Uploaden"/>
+			</form>
+		</div>
+	</div>
+</div>
