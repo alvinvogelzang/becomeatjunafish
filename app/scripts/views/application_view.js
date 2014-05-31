@@ -15,7 +15,7 @@ BecomeTjunaFish.ApplicationView = Ember.View.extend({
   }
 });
 
-BecomeTjunaFish.IndexView = BecomeTjunaFish.CourseView = BecomeTjunaFish.LessonView = BecomeTjunaFish.TopicView = BecomeTjunaFish.AssignmentView = Ember.View.extend({
+BecomeTjunaFish.IndexView = BecomeTjunaFish.CourseView = BecomeTjunaFish.LessonView = BecomeTjunaFish.TopicView = Ember.View.extend({
 	willAnimateIn : function () {
         this.$().css("opacity", 0);
     },
@@ -29,6 +29,23 @@ BecomeTjunaFish.IndexView = BecomeTjunaFish.CourseView = BecomeTjunaFish.LessonV
     }
 });
 
+BecomeTjunaFish.ProgresscourseView = Ember.View.extend({
+    forceRerender: function(){
+        this.rerender();
+    }.observes("controller.model"),
+
+    willAnimateIn : function () {
+        this.$().css("opacity", 0);
+    },
+
+    animateIn : function (done) {
+        this.$().fadeTo(300, 1, done);
+    },
+
+    animateOut : function (done) {
+        this.$().fadeTo(300, 0, done);
+    }
+});
 
 
 BecomeTjunaFish.CourseProgressView = Ember.View.extend({  
@@ -58,6 +75,41 @@ BecomeTjunaFish.LessonView = Ember.View.extend({
 	      value: userProgress
 	    });
 	}
+
+});
+
+BecomeTjunaFish.AssignmentView = Ember.View.extend({
+    didInsertElement: function (){
+        this._super();
+        $('.custom-upload input[type=file]').change(function(){
+            $(this).next().find('input').val($(this).val());
+        });
+    },
+    willAnimateIn : function () {
+        this.$().css("opacity", 0);
+    },
+
+    animateIn : function (done) {
+        this.$().fadeTo(300, 1, done);
+    },
+
+    animateOut : function (done) {
+        this.$().fadeTo(300, 0, done);
+    }
+});
+
+BecomeTjunaFish.LessonProgressView = Ember.View.extend({
+    didInsertElement: function (){
+        this._super();
+        var userProgress = this.get('controller.model.progress');
+        console.log(userProgress);
+        $(".progressbar").each(function(){
+            $(this).progressbar();
+            $(this).progressbar('option', 'value', parseInt($(this).attr('data-value')));
+        })
+
+        
+    }
 
 });
 
