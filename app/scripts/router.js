@@ -3,9 +3,17 @@ BecomeTjunaFish.Router.map(function () {
   this.resource('index', {path: '/'});
   this.resource('course', { path: ':course_id'}, function(){
   	this.resource('lesson', {path: ':lesson_id'}, function(){
-  		this.resource('topic', {path: 'topic/:topic_id'});
-  		this.resource('assignment', {path: 'opdracht/:assignment_id'});
+  		this.route('topic', {path: 'topic/:topic_id'});
+  		this.route('assignment', {path: 'opdracht/:assignment_id'});
   	});
+  });
+  this.resource('progress', {path: '/progress'}, function(){
+  	this.resource('progresscourse', {path: ':course_id'}, function(){
+    this.resource('progresslesson', {path: ':lesson_id'}, function(){
+      this.route('progresstopic', {path: 'topic/:topic_id'});
+      this.route('progressassignment', {path: 'opdracht/:assignment_id'});
+    });
+  });
   });
 
 });
