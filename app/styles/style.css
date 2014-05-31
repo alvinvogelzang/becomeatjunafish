@@ -1,7 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-@import url(http://fonts.googleapis.com/css?family=Luckiest+Guy);
-@import url(http://fonts.googleapis.com/css?family=Coming+Soon);
-
 /* Put your CSS here */
 html, body {
 	margin: 0;
@@ -10,7 +6,11 @@ html, body {
     background-size: 1920px;
     background-attachment: fixed;
     font-family: 'Open Sans', sans-serif;
+    min-height: 100%;
+    height: 100%;
 }
+
+	.ember-view {height: 100%;}
 
 	h1 {
 		color: #FFF;
@@ -23,7 +23,7 @@ html, body {
 
 	.tjunaGreen {color: #008c9e;}
 
-	.intro p {
+	.homeIntro p {
 	    font-size: 20px;
 	    text-align: center;
 	    width: 500px;
@@ -74,7 +74,7 @@ html, body {
 			background-color: rgba(255,255,255, 0.15);
 		}
 
-		a.logo { display: block; margin: 0 auto; width: 200px; color: #FFF; text-decoration: none; line-height: 50px;}
+		a.logo { display: block; margin: 0 auto; width: 200px; color: rgba(255,255,255, .3); text-decoration: none; line-height: 50px; font-weight: lighter;}
 
 		ul.dropDown {
 			margin: 0;
@@ -133,23 +133,24 @@ html, body {
 					text-align: center;
 				}
 
-	.container { 
-		overflow: auto;	
+	.container { 	
 		width: 100%;
 		height: 100%;
 		padding: 20px 50px 70px 50px;
 		box-sizing: border-box;
+		min-height: 100%;
+		overflow: auto;
 	}
 
-		.intro {
+		.homeIntro {
 			width: 900px;
 			margin: 0 auto;
 			margin-bottom: 80px;
 		}
 
-			.intro h1, .introCourses h1 { text-align: center; text-shadow: 5px 5px 5px #000;}
+			.homeIntro h1, .introCourses h1 { text-align: center; text-shadow: 5px 5px 5px #000;}
 
-			.intro img { 
+			.homeIntro img { 
 				margin: 0 auto; 
 				display: block; 
 				width: 150px; 
@@ -182,7 +183,7 @@ html, body {
 
 			.lessonColumn h3 {color: #FFF;text-align: center;margin-top: 0;}
 
-			.progressCircle { width: 120px; margin: 0 auto; margin-top: 40px; margin-bottom: 40px;}
+			.progressCircle { width: 120px; margin: 0 auto; margin-top: 40px; margin-bottom: 40px; position: relative;}
 
 
 		.lessonMainColumn {
@@ -201,7 +202,7 @@ html, body {
 				position: relative;
 			}
 
-				.topicRow .fa-check {
+				.topicRow .fa-check, .assignmentRow .fa-check {
 					position: absolute;
 					left: 20px;
 					font-size: 25px;
@@ -209,7 +210,7 @@ html, body {
 					line-height: 70px;
 				}
 
-				.topicRow .fa-none {position: absolute;}
+				.topicRow .fa-none, .assignmentRow .fa-none {position: absolute;}
 
 				.topicRow h3, .assignmentRow h3 { text-align: center; line-height: 70px; margin: 0; position: relative;}
 
@@ -251,12 +252,15 @@ html, body {
 			margin: 0 auto;
 		}
 
+
 			.topicColumn p {
-				font-size: 16px;
+				font-size: 14px;
 				line-height: 2em;
 				color: #FFF;
 				font-weight: lighter;
 			}
+
+			p.intro {font-size: 16px;}
 
 			a.linkContainer {
 				background-color: rgba(255,255,255, .2);
@@ -377,7 +381,194 @@ html, body {
 						background-color: rgba(255,255,255, .3);
 					}
 
+			.assignmentInstructions, .assignmentUpload {margin-top: 50px;}
 
+				.assignmentInstructions ol {
+	    			line-height: 2em;
+	    			font-size: 14px;
+	    			font-weight: lighter;
+				}
+
+			form.custom-upload {
+				position: relative;
+			}
+
+			input[type=file]
+			{
+			    outline:none;
+			    text-align: right;    
+			    -moz-opacity:0 ;
+			    filter:alpha(opacity: 0);
+			    z-index: 2;
+			    width:150px;
+			    height:25px;
+			    border:thin solid #FFF;
+			    opacity:0;
+			    display:inline;
+			    position:relative;
+			    float:left;
+			    
+			}
+
+			.custom-upload .fake-file
+			{
+			    position: absolute;
+			    left: 0px;
+			    z-index: 1;
+			    top: 0px;
+			    padding: 0;
+			    margin: 0;
+			    
+			}
+
+			input:disabled {
+				width: 139px;
+				height: 28px;
+				background-color: rgba(255,255,255,.2);
+				border: none;
+				color: #FFF;
+				padding-left: 12px;
+			}
+
+			input.uploadBtn[type="submit"] {
+			    text-align: center;
+			    text-decoration: none;
+			    font-size: 12px;
+			    margin: 0px auto;
+			    transition: background-color 0.2s ease 0s;
+			    cursor: pointer;
+			    width: auto;
+			    height: 30px;
+			    font-weight: lighter;
+			    border: medium none;
+			    background-color: #008c9e;
+			    color: #FFF;
+			    line-height: 28px;;;
+			}
+
+			input[type="submit"].uploadBtn:hover {background-color: #0096a9;}
+
+		.progressSidebar {
+			width: 250px;
+			background-image: url('../images/progress_line_vertical.png');
+			background-repeat: no-repeat;
+			background-repeat-y: inherit;
+			background-position: right;
+			margin: 10px 0;
+			float: left;
+			height: 100%;
+		}
+
+			.progressSidebar h2 {
+				padding-top: 10px;
+				text-align: center;
+				font-size: 16px;
+				font-family: 'coming soon';
+			}
+
+			.progressAvatar { 
+				background-image: url('../images/progress_line_horizontal.png');
+				background-repeat: no-repeat;
+				background-repeat-x: initial;
+				background-position: bottom;
+				padding-bottom: 30px;
+				margin: 0 15px;
+			}
+
+				.progressAvatar img {
+					margin: 0 auto;
+					display: block;
+					width: 100px;
+				}
+
+			.progressCourses {
+				margin-top: 20px;
+			}
+
+				.progressSidebar ul {
+					list-style: none;
+					font-family: 'coming soon';
+					margin: 0 15px;
+					padding: 0;
+				}
+
+					.progressSidebar a{
+						text-decoration: none;
+						color: #FFF;
+					}
+
+						li.progressCourseLink {
+							height: 50px;
+							line-height: 50px;
+							margin-bottom: 10px;
+							padding-left: 20px;
+						}
+
+						li.progressCourseLink:hover, a.active li.progressCourseLink {
+							background-color: rgba(0,0,0,.4)
+						}
+
+						.progressCourseLink .fa-chevron-right {
+							float: right;
+							line-height: 50px;
+							margin-right: 10px;
+							display: none;
+						}
+
+						.progressCourseLink:hover .fa-chevron-right, a.active .fa-chevron-right {
+							display: block;
+						}
+
+		.progressMain {
+			padding: 20px 50px;
+			float: left;
+		}
+
+			.lessonProgress {
+			    width: 600px;
+			    background-color: rgba(0,0,0,.4);
+			    padding: 20px;
+			    margin-bottom: 30px;
+			}
+
+				.lessonProgressHeader {
+				    background-image: url('../images/progress_line_horizontal.png');
+				    background-repeat: no-repeat;
+				    background-repeat-x: initial;
+				    background-position: bottom;
+				    padding-bottom: 20px; 
+				}
+
+					.lessonProgressHeader h2 {
+						display: inline;
+					}
+
+					.lessonProgressHeader .progressbar {
+						margin-left: 20px;
+						float: right;
+						margin-top: 10px;
+					}
+
+				.lessonTopic {
+					margin: 20px 0;
+					position: relative;
+				}
+
+					.lessonTopic i {
+						position: absolute; 
+						left: 0;
+						line-height: 29px;
+						color: #008c9e;
+					}
+
+					.lessonTopic h3 {
+						display: inline;
+						margin-left: 30px;
+					}
+
+
+
+		/* CSS Shake animation */ 
 
 		@-webkit-keyframes spaceboots {
 			0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
@@ -440,7 +631,6 @@ html, body {
 			background: rgba(255,255,255, .2);
 			display: inline-block;
 		}
-
 
 
 
