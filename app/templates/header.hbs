@@ -4,8 +4,12 @@
       <li>
         <a class="dropdown-toggle">Menu <i class="fa fa-chevron-down"></i><i class="fa fa-chevron-up"></i></a>
         <ul class="menuItems">
-          {{#link-to '' tagName="li" href=false}}<a href="#">Progressie</a>{{/link-to}}
-          {{#link-to '' tagName="li" href=false}}<a href="#">Uitloggen</a>{{/link-to}}
+          <li>
+            {{#link-to 'progress'}}Progressie{{/link-to}}
+          </li>
+          <li>
+            {{#link-to '' }}Uitloggen{{/link-to}}
+          </li>
         </ul>
       </li>
     </ul>

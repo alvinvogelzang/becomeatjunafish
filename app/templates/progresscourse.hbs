@@ -1,0 +1,31 @@
+<div class="courseProgress">
+	<h1>{{title}} cursus</h1>
+
+	{{#each lessons}}
+		<div class="lessonProgress">
+			{{#view BecomeTjunaFish.LessonProgressView}}
+				<div class="lessonProgressHeader">
+					<h2>{{title}} les</h2>
+					<div class="progressbar" data-value=""></div>
+				</div>
+			{{/view}}
+			{{#each topics}}
+				<div class="lessonTopic">
+					<i {{bind-attr class=":fa isCompleted:fa-check:fa-none"}}></i>
+					<h3>
+						{{title}}
+					</h3>
+				</div>
+			{{/each}}
+			{{#each assignments}}
+				<div class="lessonTopic">
+					<i {{bind-attr class=":fa isCompleted:fa-check:fa-none"}}></i>
+					<h3>
+						{{title}}
+					</h3>
+				</div>
+			{{/each}}
+		</div>
+	{{/each}}
+	
+</div>

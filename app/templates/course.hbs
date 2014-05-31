@@ -1,22 +1,24 @@
-<h1>{{title}} Cursus</h1>
+<div class="container">
+	<h1>{{title}} Cursus</h1>
 
-<div class="courseGoal">
-	<p>Doel van deze cursus: {{goal}}</p>
-	<p>De cursus is gericht op: {{targetGroup}}</p>
-	<p>Dit is de voorkennis die voor deze cursus nodig is: {{prerequisites}}</p>
-</div>
-
-<div class="row">
-	<h2>De lessen</h2>
-	{{#each lessons}}
-	<div class="lessonColumn">
-		{{#view BecomeTjunaFish.CourseProgressView}}
-			<h3>{{title}}</h3>
-			<div class="progressCircle">
-				{{input type="text" value=progress class="dial"}}
-			</div>
-			{{#link-to "lesson" this class="default-btn"}}Begin deze les{{/link-to}}
-		{{/view}}
+	<div class="courseGoal">
+		<p>Doel van deze cursus: {{goal}}</p>
+		<p>De cursus is gericht op: {{targetGroup}}</p>
+		<p>Dit is de voorkennis die voor deze cursus nodig is: {{prerequisites}}</p>
 	</div>
-	{{/each}}
+
+	<div class="row">
+		<h2>De lessen</h2>
+		{{#each lessons}}
+		<div class="lessonColumn">
+			{{#view BecomeTjunaFish.CourseProgressView}}
+				<h3>{{title}}</h3>
+				<div class="progressCircle">
+					{{input type="text" value=progress class="dial"}}
+				</div>
+				{{#link-to "lesson" this class="default-btn"}}Begin deze les{{/link-to}}
+			{{/view}}
+		</div>
+		{{/each}}
+	</div>
 </div>
