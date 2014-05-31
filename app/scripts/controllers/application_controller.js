@@ -1,4 +1,4 @@
-BecomeTjunaFish.TopicController = Ember.ObjectController.extend({
+BecomeTjunaFish.LessonTopicController = Ember.ObjectController.extend({
   isCompleted: function(key, value){
     var model = this.get('model');
 
@@ -12,9 +12,12 @@ BecomeTjunaFish.TopicController = Ember.ObjectController.extend({
       return value;
     }
   }.property('model.isCompleted'),
+
+  actions: {
+     nextPost: function(){
+      var topic = this.get('controllers');
+      console.log(topic);
+    }
+  }
   
-  
- 
-  
-     
 });
