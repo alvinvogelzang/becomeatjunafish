@@ -10,6 +10,87 @@ html, body {
     height: 100%;
 }
 
+	#menu {
+         top: 0;
+         bottom: 0;
+         width: 250px;
+         -webkit-transform: translate(0px, 0px);
+        -moz-transform: translate(0px, 0px);
+        -o-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        -o-transition: 0.3s ease;
+        transition: 0.3s ease;
+        z-index: 9999;
+        position: absolute;
+        right: -250px;
+        background-color: rgba(0,0,0,.4);
+	}
+
+	 #menu.active {
+        -webkit-transform: translate(-250px, 0px);
+        -moz-transform: translate(-250px, 0px);
+        -o-transform: translate(-250px, 0px);
+        -ms-transform: translate(-250px, 0px);
+        transform: translate(-250px, 0px);
+	}
+
+		#menu ul {list-style:  none;padding:  0 30px;;}
+
+			#menu ul span { display: block; background-image: url('../images/progress_line_horizontal.png');
+				background-repeat: no-repeat;
+				background-position: bottom;
+				margin-bottom: 10px;
+				background-repeat-x: initial;
+				padding-bottom: 18px;
+				font-family: 'Coming Soon', cursive;}
+
+			#menu li {padding: 5px 0;}
+
+				#menu li a{
+					text-decoration: none;
+					color: #FFF;
+					font-weight: lighter;;;
+				}
+
+	.mainContainer {
+       -webkit-transform: translate(0px, 0px);
+       -moz-transform: translate(0px, 0px);
+       -o-transform: translate(0px, 0px);
+       -ms-transform: translate(0px, 0px);
+       transform: translate(0px, 0px);
+       -webkit-transition: 0.3s ease;
+       -moz-transition: 0.3s ease;
+       -o-transition: 0.3s ease;
+       transition: 0.3s ease;
+       height: 100%;
+       min-height: 100%;  
+	}
+
+	.mainContainer.active {
+       -webkit-transform: translate(-250px, 0px);
+       -moz-transform: translate(-250px, 0px);
+       -o-transform: translate(-250px, 0px);
+       -ms-transform: translate(-250px, 0px);
+       transform: translate(-250px, 0px);
+	}
+
+	.menu-link {
+      position: absolute;
+      top: 7px;
+      left: -40px;
+      z-index: 99999;
+      font-size: 15px;
+      cursor: pointer;
+      background-color: rgba(0,0,0,0.2);
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;;
+	}
+	
 	.ember-view {height: 100%;}
 
 	h1 {
@@ -74,7 +155,7 @@ html, body {
 			background-color: rgba(255,255,255, 0.15);
 		}
 
-		a.logo { display: block; margin: 0 auto; width: 200px; color: rgba(255,255,255, .3); text-decoration: none; line-height: 50px; font-weight: lighter;}
+		a.logo { display: block; margin: 0 auto; width: 200px; color: rgba(255,255,255, .3); text-decoration: none; line-height: 50px; font-weight: lighter; font-family: 'Coming Soon', cursive;;}
 
 		ul.dropDown {
 			margin: 0;
@@ -135,10 +216,8 @@ html, body {
 
 	.container { 	
 		width: 100%;
-		height: 100%;
 		padding: 20px 50px 70px 50px;
 		box-sizing: border-box;
-		min-height: 100%;
 		overflow: auto;
 	}
 
@@ -191,6 +270,8 @@ html, body {
 		    width: 50%;
 		    min-width: 500px;
 		    max-width: 600px;
+		    padding: 20px 50px 70px 50px;
+		    height: 100%;
 		}
 
 			.topicRow, .assignmentRow {
@@ -231,8 +312,13 @@ html, body {
 		.lessonSideColumn {
 			float: right;
 			width: 250px;
-			height: 500px;
-			margin-top: 50px;	
+			background-image: url('../images/progress_line_vertical.png');
+			background-repeat: no-repeat;
+			background-repeat-y: inherit;
+			background-position: left;
+			margin: 10px 0;
+			height: 100%;
+			padding: 10px 30px;	
 		}
 
 			.lessonSideColumn h3 {
@@ -522,9 +608,10 @@ html, body {
 		.progressMain {
 			padding: 20px 50px;
 			float: left;
+			height: 100%;
 		}
 
-			.lessonProgress {
+			.lessonProgressOverview {
 			    width: 600px;
 			    background-color: rgba(0,0,0,.4);
 			    padding: 20px;
