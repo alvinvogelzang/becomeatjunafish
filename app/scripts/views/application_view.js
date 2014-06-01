@@ -12,6 +12,10 @@ BecomeTjunaFish.ApplicationView = Ember.View.extend({
 	  }, function() {
 	    $(this).parent('.introCourseColumn').find('.shake').removeClass("hover");
 	  });
+    $(".menu-link, #menu ul li").click(function(){
+      $("#menu").toggleClass("active");
+      $(".mainContainer").toggleClass("active");
+});
   }
 });
 
