@@ -1,52 +1,50 @@
-<div class="container">
-	<div class="lessonMainColumn">
+<div class="lessonMainColumn">
 
-		<h1>{{title}} Les</h1>
+	<h1>{{title}} Les</h1>
 
 
-		<div class="row courseGoal">
-			<p>Doel van deze les: {{goal}}</p>
-			<p>De les is gericht op: {{targetGroup}}</p>
-			<p>Dit is de voorkennis die voor deze les nodig is: {{prerequisites}}</p>
-		</div>
-
-		<h2>De topics</h2>
-			
-		{{#each topics}}
-			<div class="topicRow">
-				<i {{bind-attr class=":fa isCompleted:fa-check:fa-none"}}></i><h3>{{#link-to "lesson.topic" this}}{{title}}{{/link-to}}<i class="fa fa-chevron-right"></i></h3>
-			</div>
-		{{/each}}
-
-		<h2>De opdracht</h2>
-
-		{{#each assignments}}
-		<div class="assignmentRow">
-			<i {{bind-attr class=":fa isCompleted:fa-check:fa-none"}}></i><h3><h3>{{#link-to "lesson.assignment" this}}{{title}}{{/link-to}}<i class="fa fa-chevron-right"></i></h3>
-		</div>
-		{{/each}}
-
+	<div class="row courseGoal">
+		<p>Doel van deze les: {{goal}}</p>
+		<p>De les is gericht op: {{targetGroup}}</p>
+		<p>Dit is de voorkennis die voor deze les nodig is: {{prerequisites}}</p>
 	</div>
 
-	<div class="lessonSideColumn">
-		<div class="lessonProgress">
-			<h3>Progressie</h3>
-			<div id="progressbar"></div>
-			<span>{{progress}}%</span>
+	<h2>De topics</h2>
+		
+	{{#each topics}}
+		<div class="topicRow">
+			<i {{bind-attr class=":fa isCompleted:fa-check:fa-none"}}></i><h3>{{#link-to "lesson.topic" this}}{{title}}{{/link-to}}<i class="fa fa-chevron-right"></i></h3>
 		</div>
-		<div class="lessonLevel">
-			<h3>Niveau les</h3>
-			<span>{{lesson_level}}</span>
-		</div>
-		<div class="lessonTimeIdication">
-			<h3>Tijdsindicatie</h3>
-			<span>{{lesson_time_indication}}</span>
-		</div>
-		<div class="lessonAuthors">
-			<h3>Deze les is ontwikkeld door</h3>
-			{{#each lesson_authors}}
-			<span>{{name}}</span>
-			{{/each}}
-		</div>
+	{{/each}}
+
+	<h2>De opdracht</h2>
+
+	{{#each assignments}}
+	<div class="assignmentRow">
+		<i {{bind-attr class=":fa isCompleted:fa-check:fa-none"}}></i><h3><h3>{{#link-to "lesson.assignment" this}}{{title}}{{/link-to}}<i class="fa fa-chevron-right"></i></h3>
+	</div>
+	{{/each}}
+
+</div>
+
+<div class="lessonSideColumn">
+	<div class="lessonProgress">
+		<h3>Progressie</h3>
+		<div id="progressbar"></div>
+		<span>{{progress}}%</span>
+	</div>
+	<div class="lessonLevel">
+		<h3>Niveau les</h3>
+		<span>{{lesson_level}}</span>
+	</div>
+	<div class="lessonTimeIdication">
+		<h3>Tijdsindicatie</h3>
+		<span>{{lesson_time_indication}}</span>
+	</div>
+	<div class="lessonAuthors">
+		<h3>Deze les is ontwikkeld door</h3>
+		{{#each lesson_authors}}
+		<span>{{name}}</span>
+		{{/each}}
 	</div>
 </div>
