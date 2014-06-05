@@ -1,9 +1,14 @@
-{{render togglenav}}
 <div class="mainContainer">
 
-	{{render header}}
+	{{render togglenav}}
 
-	{{outlet}}
+	<div class="contentWrapper">
+
+		{{render header}}
+
+		{{outlet}}
+
+	</div>
 </div>
 
 
