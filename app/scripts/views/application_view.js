@@ -14,7 +14,7 @@ BecomeTjunaFish.ApplicationView = Ember.View.extend({
 	  });
     $(".menu-link, #menu ul li").click(function(){
       $("#menu").toggleClass("active");
-      $(".mainContainer").toggleClass("active");
+      $(".contentWrapper").toggleClass("active");
 });
   }
 });
@@ -75,7 +75,7 @@ BecomeTjunaFish.LessonView = Ember.View.extend({
 		this._super();
 		var userProgress = this.get('controller.model.progress');
 		console.log(userProgress);
-		$("#progressbar" ).progressbar({
+		$("#progressbar").progressbar({
 	      value: userProgress
 	    });
 	}
@@ -116,4 +116,6 @@ BecomeTjunaFish.LessonProgressView = Ember.View.extend({
     }
 
 });
+
+
 
