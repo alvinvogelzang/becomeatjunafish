@@ -2,17 +2,15 @@
 html, body {
 	margin: 0;
     color: #FFF;
-    background-image: url('../images/blackboard_1.jpg');
     background-size: 1920px;
     background-attachment: fixed;
     font-family: 'Open Sans', sans-serif;
     min-height: 100%;
     height: 100%;
+    background-image: url('../images/blackboard_1.jpg');
 }
 
 	#menu {
-         top: 0;
-         bottom: 0;
          width: 250px;
          -webkit-transform: translate(0px, 0px);
         -moz-transform: translate(0px, 0px);
@@ -27,6 +25,10 @@ html, body {
         position: absolute;
         right: -250px;
         background-color: rgba(0,0,0,.4);
+        height: 100%;
+        min-height: 100%;
+        top: 0;
+        bottom: 0;
 	}
 
 	 #menu.active {
@@ -56,6 +58,13 @@ html, body {
 				}
 
 	.mainContainer {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;}
+
+	.contentWrapper {
        -webkit-transform: translate(0px, 0px);
        -moz-transform: translate(0px, 0px);
        -o-transform: translate(0px, 0px);
@@ -69,7 +78,7 @@ html, body {
        min-height: 100%;  
 	}
 
-	.mainContainer.active {
+	.contentWrapper.active {
        -webkit-transform: translate(-250px, 0px);
        -moz-transform: translate(-250px, 0px);
        -o-transform: translate(-250px, 0px);
@@ -155,7 +164,7 @@ html, body {
 			background-color: rgba(255,255,255, 0.15);
 		}
 
-		a.logo { display: block; margin: 0 auto; width: 200px; color: rgba(255,255,255, .3); text-decoration: none; line-height: 50px; font-weight: lighter; font-family: 'Coming Soon', cursive;;}
+		a.logo { display: block; margin: 0 auto; width: 200px; color: rgba(255,255,255, .5); text-decoration: none; line-height: 50px; font-weight: lighter; font-family: 'Coming Soon', cursive;;}
 
 		ul.dropDown {
 			margin: 0;
@@ -214,7 +223,7 @@ html, body {
 					text-align: center;
 				}
 
-	.container { 	
+	.paddingContainer { 	
 		width: 100%;
 		padding: 20px 50px 70px 50px;
 		box-sizing: border-box;
@@ -609,49 +618,57 @@ html, body {
 			padding: 20px 50px;
 			float: left;
 			height: 100%;
+			width: calc(100% - 350px);
 		}
 
-			.lessonProgressOverview {
-			    width: 600px;
-			    background-color: rgba(0,0,0,.4);
-			    padding: 20px;
-			    margin-bottom: 30px;
+			.courseProgress {
+				width: 650px;
+				margin: 0 auto;
 			}
 
-				.lessonProgressHeader {
-				    background-image: url('../images/progress_line_horizontal.png');
-				    background-repeat: no-repeat;
-				    background-repeat-x: initial;
-				    background-position: bottom;
-				    padding-bottom: 20px; 
+				.courseProgress h1 { text-align: center;}
+
+				.lessonProgressOverview {
+				    width: 600px;
+				    background-color: rgba(0,0,0,.4);
+				    padding: 20px;
+				    margin-bottom: 30px;
 				}
 
-					.lessonProgressHeader h2 {
-						display: inline;
+					.lessonProgressHeader {
+					    background-image: url('../images/progress_line_horizontal.png');
+					    background-repeat: no-repeat;
+					    background-repeat-x: initial;
+					    background-position: bottom;
+					    padding-bottom: 20px; 
 					}
 
-					.lessonProgressHeader .progressbar {
-						margin-left: 20px;
-						float: right;
-						margin-top: 10px;
+						.lessonProgressHeader h2 {
+							display: inline;
+						}
+
+						.lessonProgressHeader .progressbar {
+							margin-left: 20px;
+							float: right;
+							margin-top: 10px;
+						}
+
+					.lessonTopic {
+						margin: 20px 0;
+						position: relative;
 					}
 
-				.lessonTopic {
-					margin: 20px 0;
-					position: relative;
-				}
+						.lessonTopic i {
+							position: absolute; 
+							left: 0;
+							line-height: 29px;
+							color: #008c9e;
+						}
 
-					.lessonTopic i {
-						position: absolute; 
-						left: 0;
-						line-height: 29px;
-						color: #008c9e;
-					}
-
-					.lessonTopic h3 {
-						display: inline;
-						margin-left: 30px;
-					}
+						.lessonTopic h3 {
+							display: inline;
+							margin-left: 30px;
+						}
 
 
 
