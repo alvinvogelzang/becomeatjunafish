@@ -1,12 +1,9 @@
 <div class="progressSidebar">
-	<h2>Mijn progressie</h2>
-	<div class="progressAvatar">
-		<img src="images/large_egg.png"/>
-	</div>
 	<div class="progressCourses">
 		<ul>
+			{{#link-to "rewards"}}<li class="progressCourseLink">Mijn prestaties<i class="fa fa-chevron-right"></i></li>{{/link-to}}
 			{{#each}}
-				{{#link-to "progresscourse" this}}<li class="progressCourseLink">{{title}}<i class="fa fa-chevron-right"></i></li>{{/link-to}}
+				{{#link-to "progresscourse" this}}<li class="progressCourseLink">{{title}} progressie<i class="fa fa-chevron-right"></i></li>{{/link-to}}
 			{{/each}}
 		</ul>
 	</div>
