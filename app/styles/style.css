@@ -1,13 +1,29 @@
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("fonts/ProximaNova_Regular.ttf");
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("fonts/ProximaNova_Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("fonts/ProximaNova_Light.ttf");
+    font-style: lighter;
+}
+
+
 /* Put your CSS here */
 html, body {
 	margin: 0;
     color: #FFF;
     background-size: 1920px;
     background-attachment: fixed;
-    font-family: 'Open Sans', sans-serif;
     min-height: 100%;
     height: 100%;
     background-image: url('../images/blackboard_1.jpg');
+    font-family: 'Proxima Nova', sans-serif;
 }
 
 	#menu {
@@ -41,20 +57,24 @@ html, body {
 
 		#menu ul {list-style:  none;padding:  0 30px;;}
 
-			#menu ul span { display: block; background-image: url('../images/progress_line_horizontal.png');
-				background-repeat: no-repeat;
+			#menu ul span { 
+				display: block; background-image: url('../images/progress_line_horizontal.png');
 				background-position: bottom;
 				margin-bottom: 10px;
-				background-repeat-x: initial;
-				padding-bottom: 18px;
-				font-family: 'Coming Soon', cursive;}
+				padding-bottom: 12px;
+				font-family: 'Coming Soon', cursive;
+				font-size: 18px;
+				background-repeat: repeat-x;
+				color: rgba(255,255,255, .8);
+			}
 
-			#menu li {padding: 5px 0;}
+			#menu li {padding: 12px 0;;;}
 
 				#menu li a{
 					text-decoration: none;
 					color: #FFF;
-					font-weight: lighter;;;
+					font-size: 16px;
+					font-weight: lighter;
 				}
 
 	.mainContainer {
@@ -114,14 +134,21 @@ html, body {
 	.tjunaGreen {color: #008c9e;}
 
 	.homeIntro p {
-	    font-size: 20px;
-	    text-align: center;
-	    width: 500px;
-	    margin: 0 auto;
-	    line-height: 2;
+	    font-size: 18px;
 	    font-weight: lighter;
 	    font-family: 'Coming Soon', cursive;
+	    vertical-align: middle;
+	    text-align: center;
+	    line-height: 2;
+	    width: 450px;
+	    display: inline-block;
+	    margin: 0;;
 	}
+
+		.homeIntro .egg {
+    width: 590px;
+    margin: 80px auto 80px;
+    height: 100px;;}
 
 	.default-btn {
 		background-color: #008c9e;
@@ -154,15 +181,26 @@ html, body {
 		box-shadow: 5px 5px 5px #000;
 	}
 
-		.backBtn {
-			border: none;
-			color: #FFF;
-			width: 100px;
-			height: 100%;
-			display: block;
-			float: left;
-			background-color: rgba(255,255,255, 0.15);
+		.linkToParent {
+			background-color: rgba(0,0,0, 0.2);
+			position: absolute;
+			top: 9px;
+			border-radius: 5px;
+			text-align: center;
+			font-weight: lighter;
+			font-size: 13px;
+			height: 35px;
+			width: auto;
+			color: rgba(255,255,255,1);
+			text-decoration: none;
+			left: 10px;
+			line-height: 35px;
+			padding: 0 10px;
 		}
+
+			.linkToParent i { margin-right: 5px; font-size: 12px;}
+
+			.linkToParent:hover {background-color: rgba(0,0,0, 0.25);}
 
 		a.logo { display: block; margin: 0 auto; width: 200px; color: rgba(255,255,255, .5); text-decoration: none; line-height: 50px; font-weight: lighter; font-family: 'Coming Soon', cursive;;}
 
@@ -233,17 +271,17 @@ html, body {
 		.homeIntro {
 			width: 900px;
 			margin: 0 auto;
-			margin-bottom: 80px;
+			margin-bottom: 50px;
 		}
 
-			.homeIntro h1, .introCourses h1 { text-align: center; text-shadow: 5px 5px 5px #000;}
+			.homeIntro h1{ text-align: center; text-shadow: 3px 3px 3px #000;}
 
-			.homeIntro img { 
-				margin: 0 auto; 
-				display: block; 
-				width: 150px; 
-				margin-top: 80px; 
-				margin-bottom: 80px;
+			.introCourses h2 { font-size: 38px; text-align: center; text-shadow: 3px 3px 3px #000;}
+
+			.homeIntro img {   
+				width: 110px;
+				display: inline-block;
+				vertical-align: middle;  
 			}
 
 		.introCourses {
@@ -258,14 +296,40 @@ html, body {
 				margin-top: 30px;
 			}
 
-				.introCourseColumn img {
-					display: block;
-					margin: 0 auto;
+				.introCourseColumn .introAvatars {
+					height: 200px;
 				}
 
-		.courseGoal { margin-bottom: 50px; font-weight: lighter;}
+				.introCourseColumn img {
+					margin: 0 auto;
+					display: block;
+				}
 
-			.courseGoal p {font-family: 'Coming Soon', cursive;}
+		.courseGoal { margin-bottom: 50px; font-weight: lighter; color: #CCC;}
+
+			.courseGoal p {font-family: 'Coming Soon', cursive;height: 25px;}
+
+			.courseGoal span {
+    		vertical-align: middle;
+    		font-family: 'Proxima Nova';
+    	}
+
+			.courseGoal .targetIcon, .courseGoal .userIcon, .courseGoal .prerequisitesIcon { 
+				width: 20px; 
+				height: 20px; 
+				display: inline-block; 
+				background-size: 20px; 
+				opacity: .4; 
+				margin: 0 15px 0 0; 
+				vertical-align: middle;
+				background-repeat: no-repeat;
+			}
+
+			.targetIcon  {background-image: url('../images/target_icon.png');}
+			.userIcon  {background-image: url('../images/user_icon.png');}
+			.prerequisitesIcon  {background-image: url('../images/prerequisites_icon.png');}
+
+
 
 		.lessonColumn { width: 250px; float: left; background-color: rgba(0,0,0, .4); margin-right: 20px; padding: 20px; box-sizing: border-box; border-radius: 5px;}
 
@@ -322,12 +386,10 @@ html, body {
 			float: right;
 			width: 250px;
 			background-image: url('../images/progress_line_vertical.png');
-			background-repeat: no-repeat;
-			background-repeat-y: inherit;
-			background-position: left;
 			margin: 10px 0;
 			height: 100%;
-			padding: 10px 30px;	
+			padding: 10px 30px;
+			background-repeat: repeat-y;	
 		}
 
 			.lessonSideColumn h3 {
@@ -336,11 +398,55 @@ html, body {
 
 			.lessonSideColumn span {
 				font-size: 14px;
-				top: 0;
 				vertical-align: top;
 				color: rgba(255,255,255, .5);
 				margin-left: 5px;
+				line-height: 20px;
 			}
+
+		.popUpReward { 
+			background-color: rgba(30,30,30,.95); 
+			width: 600px; 
+			height: 400px; 
+			left: 50%; 
+			margin-left: -300px; 
+			top: 50%; 
+			margin-top: -200px; 
+			z-index: -1; 
+			position: fixed;
+			-webkit-transition: all .4s ease-in-out;
+			opacity: 0;
+			padding: 20px;
+			box-sizing: border-box;
+			box-shadow: 0px 0px 2px #000;  
+		}
+			.popUpReward.show { opacity: 1; z-index: 99999; -webkit-transform: scale(1.2); }
+
+
+			.popUpReward h2, .popUpReward h2 { text-align: center; font-family: 'Coming Soon', cursive; background-image: url('../images/progress_line_horizontal.png'); background-repeat: repeat-x; background-position: bottom; padding-bottom: 20px; margin: 0;}
+
+				.popUpReward p { text-align: center; font-weight: bold; margin: 0;}
+
+				p.popUpPoints { color: #FFF; font-size: 80px; height: 230px; line-height: 210px;}
+
+				span.popUpPointsText { font-size: 28px; color: #FFF; margin-left: 20px; vertical-align: middle;}
+
+			.popUpNextTopic {
+			    background-image: url('../images/progress_line_horizontal.png');
+			    background-repeat: repeat-x;
+			    background-position: top;
+			    padding-top: 30px;
+			}
+
+				.popUpNextTopic .nextTopicBtn { width: 210px; margin: 0 auto;}
+
+					.nextTopicBtn a { text-decoration: none; color: #FFF;}
+
+				.popUpNextTopic p {
+					font-family: 'coming soon';
+				}
+
+			.closePopUp {position: absolute;top: 10px;right: 20px; font-size: 30px; cursor: pointer;}
 
 		.topicColumn {
 			width: 600px;
@@ -351,11 +457,10 @@ html, body {
 			.topicColumn p {
 				font-size: 14px;
 				line-height: 2em;
-				color: #FFF;
-				font-weight: lighter;
+				color: #CCC;
 			}
 
-			p.intro {font-size: 16px;}
+			p.intro {font-size: 16px;font-weight: bold;color: #CCC;}
 
 			a.linkContainer {
 				background-color: rgba(255,255,255, .2);
@@ -369,6 +474,9 @@ html, body {
 			.linkContainer:hover {
 				background-color: #008c9e;
 			}
+
+			.topicCompleted {
+    margin-top: 10px;}
 
 
 				span.linkIcon {
@@ -395,8 +503,8 @@ html, body {
 			    padding-left: 25px;  
 			    margin-right: 15px;  
 			    font-size: 12px;
-			    font-weight: lighter;
-			    color: #ccc;  
+			    color: #ccc;
+			    font-weight: lighter;  
 			} 
 
 			label:before {  
@@ -476,16 +584,36 @@ html, body {
 						background-color: rgba(255,255,255, .3);
 					}
 
-			.assignmentInstructions, .assignmentUpload {margin-top: 50px;}
+			.assignmentInstructions, .assignmentUpload, .assignmentFeedback {margin-top: 50px;}
+
+			.assignmentFeedback { 
+				display: block;
+			    -webkit-transition: opacity 1s ease-out;
+			    opacity: 0; 
+			    height: 0;
+			    overflow: hidden;
+			}
+
+				.assignmentFeedback h2 {display: inline}
+
+				.assignmentFeedback .feedbackAuthor {
+				    margin-left: 10px;
+				    font-size: 12px;
+				    font-style: italic;
+				}
+
+			.assignmentFeedback.show {opacity: 1; height: auto;}
 
 				.assignmentInstructions ol {
 	    			line-height: 2em;
 	    			font-size: 14px;
 	    			font-weight: lighter;
+	    			color: #CCC;
 				}
 
 			form.custom-upload {
 				position: relative;
+				height: 30px;;
 			}
 
 			input[type=file]
@@ -495,29 +623,49 @@ html, body {
 			    -moz-opacity:0 ;
 			    filter:alpha(opacity: 0);
 			    z-index: 2;
-			    width:150px;
-			    height:25px;
+			    height:28px;
 			    border:thin solid #FFF;
 			    opacity:0;
 			    display:inline;
 			    position:relative;
+			    margin-bottom:20px;
+			    cursor:pointer;
+			    width:123px;
 			    float:left;
+			    margin-right:10px;;
 			    
 			}
 
 			.custom-upload .fake-file
 			{
-			    position: absolute;
 			    left: 0px;
 			    z-index: 1;
 			    top: 0px;
 			    padding: 0;
 			    margin: 0;
+			    display: inline;
+			    cursor: pointer;
+			    position: absolute;
 			    
 			}
 
+			.fake-file span {
+				 font-size: 12px;
+			     height: 30px;
+			     background-color: rgba(255,255,255,.1);
+				 float: left;
+				 line-height: 30px;
+				 padding: 0 10px;
+				 cursor: pointer;
+				 z-index: 9999;
+			}
+
+			.fake-file span:hover {
+				background-color: rgba(255,255,255,.3);
+			}
+
 			input:disabled {
-				width: 139px;
+				width: 175px;
 				height: 28px;
 				background-color: rgba(255,255,255,.2);
 				border: none;
@@ -525,11 +673,10 @@ html, body {
 				padding-left: 12px;
 			}
 
-			input.uploadBtn[type="submit"] {
+			.uploadBtn {
 			    text-align: center;
 			    text-decoration: none;
 			    font-size: 12px;
-			    margin: 0px auto;
 			    transition: background-color 0.2s ease 0s;
 			    cursor: pointer;
 			    width: auto;
@@ -538,20 +685,21 @@ html, body {
 			    border: medium none;
 			    background-color: #008c9e;
 			    color: #FFF;
-			    line-height: 28px;;;
+			    line-height: 28px;
+			    margin: 0 auto;
+			    float: left;;;
 			}
 
-			input[type="submit"].uploadBtn:hover {background-color: #0096a9;}
+			.uploadBtn:hover {background-color: #0096a9;}
 
 		.progressSidebar {
-			width: 250px;
+			width: 280px;
 			background-image: url('../images/progress_line_vertical.png');
-			background-repeat: no-repeat;
-			background-repeat-y: inherit;
+			background-repeat: repeat-y;
 			background-position: right;
 			margin: 10px 0;
+			height: calc(100% - 70px);
 			float: left;
-			height: 100%;
 		}
 
 			.progressSidebar h2 {
@@ -573,7 +721,7 @@ html, body {
 				.progressAvatar img {
 					margin: 0 auto;
 					display: block;
-					width: 100px;
+					width: 120px;
 				}
 
 			.progressCourses {
@@ -582,9 +730,10 @@ html, body {
 
 				.progressSidebar ul {
 					list-style: none;
-					font-family: 'coming soon';
+					font-family: 'proxima nova';
 					margin: 0 15px;
 					padding: 0;
+					font-size: 16px;
 				}
 
 					.progressSidebar a{
@@ -617,16 +766,13 @@ html, body {
 		.progressMain {
 			padding: 20px 50px;
 			float: left;
-			height: 100%;
-			width: calc(100% - 350px);
 		}
 
 			.courseProgress {
-				width: 650px;
-				margin: 0 auto;
+    width: 650px;
 			}
 
-				.courseProgress h1 { text-align: center;}
+				.courseProgress h1 {}
 
 				.lessonProgressOverview {
 				    width: 600px;
@@ -637,8 +783,7 @@ html, body {
 
 					.lessonProgressHeader {
 					    background-image: url('../images/progress_line_horizontal.png');
-					    background-repeat: no-repeat;
-					    background-repeat-x: initial;
+					    background-repeat: repeat-x;
 					    background-position: bottom;
 					    padding-bottom: 20px; 
 					}
@@ -669,6 +814,46 @@ html, body {
 							display: inline;
 							margin-left: 30px;
 						}
+
+			.rewardColumnLeft {	
+				width: 250px;		
+				background-image: url('../images/progress_line_vertical.png');			
+				background-position: right;	
+				padding: 0px 30px 50px 0;
+				height: 500px;
+				float: left;
+				background-repeat: repeat-y;
+			}
+
+			.rewardColumnRight {
+				margin-left: 30px;
+				float: left;
+			}
+
+				.rewardColumnLeft h2 { font-family: 'Coming Soon', cursive; font-size: 22px; text-align: center; padding-top: 10px;}
+
+				.rewardColumnRight h2 { font-family: 'Coming Soon', cursive; font-size: 22px; padding-top: 10px;}
+
+				.rewardColumnLeft p, .rewardColumnRight p { text-align: center; font-weight: bold; margin: 0;}
+
+				p.rewardPoints { color: #008c9e; font-size: 80px; margin-top: 30px;}
+
+				p.pointsText { font-size: 18px;}
+
+				.rewardAvatar {height: 50%;}
+
+					.rewardAvatar img { margin: 0 auto; width: 130px; display: block; margin-top: 40px;}
+
+				.rewardBadges { width: 260px;}
+
+					.rewardBadges img {margin: 10px;}
+
+					.rewardColumnLeft .divider {
+						background-image: url('../images/progress_line_horizontal.png');
+						background-repeat: repeat-x;
+						height: 3px;
+						background-position: inherit;
+					}
 
 
 
