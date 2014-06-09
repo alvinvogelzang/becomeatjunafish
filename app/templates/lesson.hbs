@@ -1,12 +1,13 @@
 <div class="lessonMainColumn">
 
+	{{#link-to 'course' class="linkToParent"}}<i class="fa fa-chevron-left"></i>{{course.title}}{{/link-to}}
+
 	<h1>{{title}} Les</h1>
 
-
 	<div class="row courseGoal">
-		<p>Doel van deze les: {{goal}}</p>
-		<p>De les is gericht op: {{targetGroup}}</p>
-		<p>Dit is de voorkennis die voor deze les nodig is: {{prerequisites}}</p>
+		<p><span class="targetIcon"></span><span>Doel van deze les: {{goal}}</span></p>
+		<p><span class="userIcon"></span><span>De les is gericht op: {{targetGroup}}</span></p>
+		<p><span class="prerequisitesIcon"></span><span>Benodigde voorkennis: {{prerequisites}}</span></p>
 	</div>
 
 	<h2>De topics</h2>
