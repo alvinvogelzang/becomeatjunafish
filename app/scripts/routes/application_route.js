@@ -22,6 +22,12 @@ BecomeTjunaFish.CourseIndexRoute = Ember.Route.extend({
 
 });
 
+BecomeTjunaFish.TopicssRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.find('topic');
+  }
+});
+
 BecomeTjunaFish.LessonRoute = Ember.Route.extend({
     model: function (params) {
         return this.store.find('lesson', params.lesson_id);
@@ -65,9 +71,8 @@ BecomeTjunaFish.ProgressRoute = Ember.Route.extend({
     }
     ,
     redirect: function() {
-      var firstCourse = this.modelFor('progress').get('firstObject');
-      this.transitionTo('progresscourse', firstCourse);
-      console.log(firstCourse);
+      // var firstCourse = this.modelFor('progress').get('firstObject');
+      this.transitionTo('rewards');
     }
 
 });
