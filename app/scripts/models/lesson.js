@@ -45,5 +45,12 @@ BecomeTjunaFish.Lesson.FIXTURES = [
     title: 'Bugtracker',
     progress: 0,
     course: 1
+  },
+  {
+    id: 5,
+    title: 'CSS3',
+    progress: 0,
+    course: 2
   }
+
 ];
