@@ -1,4 +1,7 @@
 <div class="paddingContainer">
+
+	{{#link-to 'lesson' class="linkToParent"}}<i class="fa fa-chevron-left"></i>{{lesson.title}}{{/link-to}}
+
 	<div class="topicColumn">
 		<h2>{{title}}</h2>
 		<p class="intro">{{intro}}</p>
@@ -13,15 +16,25 @@
 		</div>
 
 		<div class="assignmentUpload">
-			<h2>Uploaden voor feedback</h2>
+			<h2>Opdracht inleveren</h2>
 			<p>Comprimeer je opdracht in een zip-bestand en upload het voor feedback.</p>
 			<form class="custom-upload">
 				<input type="file"/>
 				<div class="fake-file">
-			        <input disabled="disabled" >
+					<span>Kies een bestand...</span>
 			    </div>
-				<input type="submit" class="uploadBtn" value="Uploaden"/>
+				<button class="uploadBtn">Uploaden</button>
 			</form>
+		</div>
+
+		<div class="assignmentFeedback">
+			<h2>Feedback</h2><span class="feedbackAuthor">door Erik de Groot</span>
+			<p>Dit is de feedback die je hebt gekregen op de opdracht. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
 	</div>
 </div>
