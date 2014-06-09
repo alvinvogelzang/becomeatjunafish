@@ -1,15 +1,19 @@
 <div class="paddingContainer">
 	<div class="homeIntro">
 		<h1>Become a Tjuna Fish</h1>
-		<img src="images/large_egg.png">
-		<p>Leer met de technieken werken die bij Tjuna worden gebruikt en ontwikkel jezelf tot een echte Tjuna Fish!</p>
+		<div class="egg">
+			<img src="images/large_egg.png">
+			<p>Leer met de technieken werken die bij Tjuna worden gebruikt en ontwikkel jezelf tot een echte Tjuna Fish!</p>
+		</div>
 	</div>
 
 	<div class="introCourses">
-		<h1 class="text-center">De cursussen</h1>
+		<h2 class="text-center">De cursussen</h2>
 		{{#each}}
 		<div class="introCourseColumn">
-			<img {{bind-attr src="img"}} class="shake"/>
+			<div class="introAvatars">
+				<img {{bind-attr src="img"}} class="shake"/>
+			</div>
 		    {{#link-to "course" this class="default-btn"}}{{title}}{{/link-to}}
 		</div>
 		{{/each}}
