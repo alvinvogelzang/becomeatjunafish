@@ -12,7 +12,7 @@ BecomeTjunaFish.Course.FIXTURES = [
   {
     id: 1,
     title: 'Tjuna Basis',
-    img: 'images/frontend_fish.png',
+    img: 'images/basic_fish.png',
     goal: 'kunnen werken met de basis tools en opmaaktalen die Tjuna gebruikt',
     targetGroup: 'frontend developers in wording',
     prerequisites: 'geen',
@@ -27,7 +27,7 @@ BecomeTjunaFish.Course.FIXTURES = [
     targetGroup: '',
     prerequisites: '',
     url: 'frontend_cursus',
-    lessons: [2,3]
+    lessons: [5]
   },
   {
     id: 3,
