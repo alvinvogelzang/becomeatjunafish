@@ -7,13 +7,14 @@ BecomeTjunaFish.Router.map(function () {
   		this.route('assignment', {path: 'opdracht/:assignment_id'});
   	});
   });
-  this.resource('progress', {path: '/progress'}, function(){
+  this.resource('progress', {path: '/progressie'}, function(){
+    this.resource('rewards', {path: 'prestaties'});
   	this.resource('progresscourse', {path: ':course_id'}, function(){
-    this.resource('progresslesson', {path: ':lesson_id'}, function(){
-      this.route('progresstopic', {path: 'topic/:topic_id'});
-      this.route('progressassignment', {path: 'opdracht/:assignment_id'});
+      this.resource('progresslesson', {path: ':lesson_id'}, function(){
+        this.route('progresstopic', {path: 'topic/:topic_id'});
+        this.route('progressassignment', {path: 'opdracht/:assignment_id'});
+      });
     });
-  });
   });
 
 });
