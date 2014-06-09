@@ -6,20 +6,34 @@ BecomeTjunaFish.ApplicationView = Ember.View.extend({
 		$('.fa-chevron-down').toggle();
 		$('.fa-chevron-up').toggle();
 	});
-	$( ".default-btn" ).hover(
-	  function() {
-	    $(this).parent('.introCourseColumn').find('.shake').addClass("hover");
-	  }, function() {
-	    $(this).parent('.introCourseColumn').find('.shake').removeClass("hover");
-	  });
     $(".menu-link, #menu ul li").click(function(){
       $("#menu").toggleClass("active");
       $(".contentWrapper").toggleClass("active");
-});
+    });
   }
 });
 
-BecomeTjunaFish.IndexView = BecomeTjunaFish.CourseView = BecomeTjunaFish.LessonView = BecomeTjunaFish.TopicView = Ember.View.extend({
+BecomeTjunaFish.IndexView = Ember.View.extend({
+    willAnimateIn : function () {
+        this.$().css("opacity", 0);
+    },
+
+    animateIn : function (done) {
+        this.$().fadeTo(300, 1, done);
+    },
+
+    animateOut : function (done) {
+        this.$().fadeTo(300, 0, done);
+    },
+    didInsertElement : function(){
+        $( ".default-btn" ).hover(
+          function() {
+            $(this).parent('.introCourseColumn').find('.shake').toggleClass("hover");
+          });
+    }
+})
+
+BecomeTjunaFish.CourseView = BecomeTjunaFish.LessonView = BecomeTjunaFish.TopicView = Ember.View.extend({
 	willAnimateIn : function () {
         this.$().css("opacity", 0);
     },
@@ -73,6 +87,7 @@ BecomeTjunaFish.CourseProgressView = Ember.View.extend({
 BecomeTjunaFish.LessonView = Ember.View.extend({
 	didInsertElement: function (){
 		this._super();
+        this.get('controller').progressCalc();
 		var userProgress = this.get('controller.model.progress');
 		console.log(userProgress);
 		$("#progressbar").progressbar({
@@ -87,6 +102,9 @@ BecomeTjunaFish.AssignmentView = Ember.View.extend({
         this._super();
         $('.custom-upload input[type=file]').change(function(){
             $(this).next().find('input').val($(this).val());
+        });
+        $('.uploadBtn').on('click', function(){
+            $('.assignmentFeedback').addClass("show");
         });
     },
     willAnimateIn : function () {
@@ -116,6 +134,30 @@ BecomeTjunaFish.LessonProgressView = Ember.View.extend({
     }
 
 });
+
+BecomeTjunaFish.TopicView = Ember.View.extend({
+    forceRerender: function(){
+        this.rerender();
+    }.observes("controller.model"),
+
+    willAnimateIn : function () {
+        this.$().css("opacity", 0);
+    },
+
+    animateIn : function (done) {
+        this.$().fadeTo(300, 1, done);
+    },
+
+    animateOut : function (done) {
+        this.$().fadeTo(300, 0, done);
+    },
+
+    didInsertElement: function (){
+        $('.closePopUp, .nextTopicBtn').on('click', function(){
+            $('.popUpReward').removeClass('show');
+        });
+    }
+})
 
 
 
