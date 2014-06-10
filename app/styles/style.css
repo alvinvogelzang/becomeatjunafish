@@ -340,9 +340,8 @@ html, body {
 
 		.lessonMainColumn {
 		    float: left;
-		    width: 50%;
+		    width: auto;
 		    min-width: 500px;
-		    max-width: 600px;
 		    padding: 20px 50px 70px 50px;
 		    height: 100%;
 		}
@@ -354,6 +353,8 @@ html, body {
 				box-sizing: border-box;
 				margin-bottom: 20px;
 				position: relative;
+				max-width: 600px;
+				min-width: 500px;
 			}
 
 				.topicRow .fa-check, .assignmentRow .fa-check {
@@ -795,7 +796,7 @@ html, body {
 						.lessonProgressHeader .progressbar {
 							margin-left: 20px;
 							float: right;
-							margin-top: 10px;
+							margin-top: 5px;
 						}
 
 					.lessonTopic {
