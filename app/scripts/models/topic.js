@@ -35,5 +35,33 @@ BecomeTjunaFish.Topic.FIXTURES = [
     intro: "Dit is de inleiding over de topic Lists. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
     link_name: 'Developer.mozilla.org',
     external_link: 'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul'
+  },
+  {
+    id: 4,
+    title: 'CSS Selectors',
+    isCompleted: false,
+    lesson: 2,
+    intro: "Dit is de inleiding over de topic CSS Selectors. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+    link_name: 'Sceneone.nl',
+    external_link: 'http://www.sceneone.nl/algemeen/notatie.php'
+  },
+  {
+    id: 5,
+    title: 'CSS Positions',
+    isCompleted: false,
+    lesson: 2,
+    intro: "Dit is de inleiding over de topic CSS Fonts. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+    link_name: 'Learnlayout.com',
+    external_link: 'http://nl.learnlayout.com/position.html'
+  },
+  ,
+  {
+    id: 6,
+    title: 'Margins en paddings',
+    isCompleted: false,
+    lesson: 2,
+    intro: "Dit is de inleiding over de topic margins en paddings. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+    link_name: 'Sceneone.nl',
+    external_link: 'http://www.sceneone.nl/positionering/margin.php'
   }
 ];

@@ -32,7 +32,15 @@ BecomeTjunaFish.Lesson.FIXTURES = [
     id: 2,
     title: 'CSS Basis',
     progress: 0,
-    course: 1
+    goal: 'Gebruik kunnen maken van CSS selectors, CSS positioning en margins en paddings',
+    targetGroup: 'frontend developers in wording',
+    prerequisites: 'geen',
+    lesson_level: 'Beginner',
+    lesson_time_indication: '30 minuten',
+    topics: [4,5,6],
+    lesson_authors: [3],
+    course: 1,
+    assignments: [2]
   },
   {
     id: 3,
