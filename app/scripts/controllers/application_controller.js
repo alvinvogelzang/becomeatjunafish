@@ -1,14 +1,14 @@
 BecomeTjunaFish.LessonController = Ember.ObjectController.extend({
-  progressCalc: function(){
-    var topicsTotal = this.get('topics.length'),
-        topicsCompleted = this.get('topics').filterBy('isCompleted', true).get('length'),
-        assignmentsTotal = this.get('assignments.length'),
-        assignmentsCompleted = this.get('assignments').filterBy('isCompleted', true).get('length'),
-        progressResult =  (((topicsCompleted + assignmentsCompleted) / (topicsTotal + assignmentsTotal)) * 100),
-        progressResultRoundUp = Math.round(progressResult);
-        this.set('progress', progressResultRoundUp);
-    return progressResultRoundUp;
-  }
+  // progressCalc: function(){
+  //   var topicsTotal = this.get('topics.length'),
+  //       topicsCompleted = this.get('topics').filterBy('isCompleted', true).get('length'),
+  //       assignmentsTotal = this.get('assignments.length'),
+  //       assignmentsCompleted = this.get('assignments').filterBy('isCompleted', true).get('length'),
+  //       progressResult =  (((topicsCompleted + assignmentsCompleted) / (topicsTotal + assignmentsTotal)) * 100),
+  //       progressResultRoundUp = Math.round(progressResult);
+  //       this.set('progress', progressResultRoundUp);
+  //   return progressResultRoundUp;
+  // }
   
 });
 

@@ -17,7 +17,7 @@ BecomeTjunaFish.Lesson.FIXTURES = [
   {
     id: 1,
     title: 'HTML Basis',
-    progress: 0,
+    progress: 50,
     goal: 'HTML basis concepten beheersen',
     targetGroup: 'frontend developers in wording',
     prerequisites: 'geen',

@@ -87,7 +87,7 @@ BecomeTjunaFish.CourseProgressView = Ember.View.extend({
 BecomeTjunaFish.LessonView = Ember.View.extend({
 	didInsertElement: function (){
 		this._super();
-        this.get('controller').progressCalc();
+        // this.get('controller').progressCalc();
 		var userProgress = this.get('controller.model.progress');
 		console.log(userProgress);
 		$("#progressbar").progressbar({
