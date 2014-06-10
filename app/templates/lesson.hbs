@@ -4,6 +4,7 @@
 
 	<h1>{{title}} Les</h1>
 
+
 	<div class="row courseGoal">
 		<p><span class="targetIcon"></span><span>Doel van deze les: {{goal}}</span></p>
 		<p><span class="userIcon"></span><span>De les is gericht op: {{targetGroup}}</span></p>
@@ -47,5 +48,9 @@
 		{{#each lesson_authors}}
 		<span>{{name}}</span>
 		{{/each}}
+	</div>
+	<div class="lessonBadge">
+		<h3>Badge voor deze les</h3>
+		<img {{bind-attr src="img"}}/>
 	</div>
 </div>

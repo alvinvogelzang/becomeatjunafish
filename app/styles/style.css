@@ -175,6 +175,9 @@ html, body {
 		background-color: #008c9e;
 		height: 50px;
 		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
 		box-sizing: border-box;
 		position: relative;
 		top: 0;
@@ -221,6 +224,9 @@ html, body {
 				text-decoration: none;
 				float: right;
 				padding: 0 10px;
+				-webkit-transition: background-color 0.2s ease;
+				-moz-transition: background-color 0.2s ease;
+				-ms-box-sizing: border-box;
 				transition: background-color 0.2s ease;
 				cursor: pointer;
 			}
@@ -245,7 +251,10 @@ html, body {
 				.menuItems li {
 				    float: left;
 				    width: 100%;
-				    transition: background-color 0.2s ease;
+				   	-webkit-transition: background-color 0.2s ease;
+					-moz-transition: background-color 0.2s ease;
+					-ms-box-sizing: border-box;
+					transition: background-color 0.2s ease;
 				}
 
 				.menuItems li:hover {
@@ -264,6 +273,9 @@ html, body {
 	.paddingContainer { 	
 		width: 100%;
 		padding: 20px 50px 70px 50px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
 		box-sizing: border-box;
 		overflow: auto;
 	}
@@ -305,6 +317,14 @@ html, body {
 					display: block;
 				}
 
+		.courseAvatar { height: 110px; float: left; margin-top: -10px; margin-right: 20px; margin: -10px 20px 0 10px;}
+
+
+		.lessonBadge { position: relative; }
+
+			.lessonBadge img {
+    height: 65px;}
+
 		.courseGoal { margin-bottom: 50px; font-weight: lighter; color: #CCC;}
 
 			.courseGoal p {font-family: 'Coming Soon', cursive;height: 25px;}
@@ -331,7 +351,18 @@ html, body {
 
 
 
-		.lessonColumn { width: 250px; float: left; background-color: rgba(0,0,0, .4); margin-right: 20px; padding: 20px; box-sizing: border-box; border-radius: 5px;}
+		.lessonColumn { 
+			width: 250px; 
+			float: left; 
+			background-color: rgba(0,0,0, .4); 
+			margin-right: 20px; 
+			padding: 20px; 
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box; 
+			border-radius: 5px;
+		}
 
 			.lessonColumn h3 {color: #FFF;text-align: center;margin-top: 0;}
 
@@ -339,22 +370,22 @@ html, body {
 
 
 		.lessonMainColumn {
-		    float: left;
-		    width: auto;
-		    min-width: 500px;
-		    padding: 20px 50px 70px 50px;
 		    height: 100%;
+		    float: left;
+		    padding: 20px 50px 70px 50px;
 		}
 
 			.topicRow, .assignmentRow {
-				width: 100%;
 				height: 70px;
 				background-color: rgba(0,0,0, .4);
-				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-ms-box-sizing: border-box;
+				box-sizing: border-box; 
 				margin-bottom: 20px;
 				position: relative;
-				max-width: 600px;
 				min-width: 500px;
+				max-width: 600px;
 			}
 
 				.topicRow .fa-check, .assignmentRow .fa-check {
@@ -371,7 +402,13 @@ html, body {
 
 				.topicRow h3 a, .assignmentRow h3 a { color: #FFF; text-decoration: none; display: block;}
 
-				.topicRow:hover, .assignmentRow:hover {background-color: rgba(0, 140, 158, 1);transition: background-color 0.2s ease;}
+				.topicRow:hover, .assignmentRow:hover {
+					background-color: rgba(0, 140, 158, 1);
+					-webkit-transition: background-color 0.2s ease;
+					-moz-transition: background-color 0.2s ease;
+					-ms-transition: background-color 0.2s ease;
+					transition: background-color 0.2s ease;
+				}
 
 
 				.topicRow i.fa.fa-chevron-right, .assignmentRow i.fa.fa-chevron-right  {
@@ -416,6 +453,9 @@ html, body {
 			z-index: -1; 
 			position: fixed;
 			-webkit-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-ms-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
 			opacity: 0;
 			padding: 20px;
 			box-sizing: border-box;
@@ -469,6 +509,9 @@ html, body {
 				margin-top: 10px;
 				display: inline-block;
 				text-decoration: none;
+				-webkit-transition: background-color 0.2s ease;
+				-moz-transition: background-color 0.2s ease;
+				-ms-transition: background-color 0.2s ease;
 				transition: background-color 0.2s ease;
 			}
 
@@ -477,7 +520,8 @@ html, body {
 			}
 
 			.topicCompleted {
-    margin-top: 10px;}
+    			margin-top: 10px;
+    		}
 
 
 				span.linkIcon {
@@ -573,6 +617,9 @@ html, body {
 				    font-size: 12px;
 				    position: relative;
 				    cursor: pointer;
+				    -webkit-transition: background-color 0.2s ease;
+				    -moz-transition: background-color 0.2s ease;
+				    -ms-transition: background-color 0.2s ease;
 				    transition: background-color 0.2s ease;
 				    margin-top: 30px;
 				}
@@ -589,7 +636,10 @@ html, body {
 
 			.assignmentFeedback { 
 				display: block;
-			    -webkit-transition: opacity 1s ease-out;
+				-webkit-transition: opacity 1s ease-out;
+				-moz-transition: opacity 1s ease-out;
+				-ms-transition: opacity 1s ease-out;
+			   transition: opacity 1s ease-out;
 			    opacity: 0; 
 			    height: 0;
 			    overflow: hidden;
@@ -678,6 +728,9 @@ html, body {
 			    text-align: center;
 			    text-decoration: none;
 			    font-size: 12px;
+			    -webkit-transition: background-color 0.2s ease 0s;
+			    -moz-transition: background-color 0.2s ease 0s;
+			    -ms-transition: background-color 0.2s ease 0s;
 			    transition: background-color 0.2s ease 0s;
 			    cursor: pointer;
 			    width: auto;
