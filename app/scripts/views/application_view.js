@@ -10,6 +10,8 @@ BecomeTjunaFish.ApplicationView = Ember.View.extend({
       $("#menu").toggleClass("active");
       $(".contentWrapper").toggleClass("active");
     });
+        
+
   }
 });
 
@@ -17,23 +19,20 @@ BecomeTjunaFish.IndexView = Ember.View.extend({
     willAnimateIn : function () {
         this.$().css("opacity", 0);
     },
-
     animateIn : function (done) {
         this.$().fadeTo(300, 1, done);
     },
-
     animateOut : function (done) {
         this.$().fadeTo(300, 0, done);
     },
     didInsertElement : function(){
-        $( ".default-btn" ).hover(
-          function() {
+        $(".default-btn" ).hover(function() {
             $(this).parent('.introCourseColumn').find('.shake').toggleClass("hover");
           });
     }
 })
 
-BecomeTjunaFish.CourseView = BecomeTjunaFish.LessonView = BecomeTjunaFish.TopicView = Ember.View.extend({
+BecomeTjunaFish.LessonView = BecomeTjunaFish.TopicView = Ember.View.extend({
 	willAnimateIn : function () {
         this.$().css("opacity", 0);
     },
@@ -46,6 +45,24 @@ BecomeTjunaFish.CourseView = BecomeTjunaFish.LessonView = BecomeTjunaFish.TopicV
         this.$().fadeTo(300, 0, done);
     }
 });
+
+BecomeTjunaFish.CourseView = Ember.View.extend({
+    forceRerender: function(){
+        this.rerender();
+    }.observes("controller.model"),
+
+    willAnimateIn : function () {
+        this.$().css("opacity", 0);
+    },
+
+    animateIn : function (done) {
+        this.$().fadeTo(300, 1, done);
+    },
+
+    animateOut : function (done) {
+        this.$().fadeTo(300, 0, done);
+    }
+})
 
 BecomeTjunaFish.ProgresscourseView = Ember.View.extend({
     forceRerender: function(){
@@ -63,6 +80,7 @@ BecomeTjunaFish.ProgresscourseView = Ember.View.extend({
     animateOut : function (done) {
         this.$().fadeTo(300, 0, done);
     }
+        
 });
 
 
@@ -90,6 +108,7 @@ BecomeTjunaFish.LessonView = Ember.View.extend({
         // this.get('controller').progressCalc();
 		var userProgress = this.get('controller.model.progress');
 		console.log(userProgress);
+        this.get('controller').allCompleted();
 		$("#progressbar").progressbar({
 	      value: userProgress
 	    });
@@ -123,12 +142,8 @@ BecomeTjunaFish.AssignmentView = Ember.View.extend({
 BecomeTjunaFish.LessonProgressView = Ember.View.extend({
     didInsertElement: function (){
         this._super();
-        var userProgress = this.get('controller.model.progress');
-        console.log(userProgress);
-        $(".progressbar").each(function(){
-            $(this).progressbar();
-            $(this).progressbar('option', 'value', parseInt($(this).attr('data-value')));
-        })
+        var content = this.get('content.progress');
+        console.log('userProgress', content);
 
         
     }

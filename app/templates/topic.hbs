@@ -16,9 +16,16 @@
 	<div class="topicColumn">
 		<h2>{{title}}</h2>
 		<p class="intro">{{intro}}</p>
+		{{#if external_link}}
 		<a target="_blank" {{bindAttr href="external_link"}} class="linkContainer">
 			<span class="linkIcon"></span><span class="linkTitle">Leer dit op {{link_name}}</span>
 		</a>
+		{{/if}}
+
+		{{#if article}}
+		<p>{{article}}</p>
+		{{/if}}
+
 		<div class="topicCompleted">
 			<div class="checkbox">
 				{{input id="check1" type="checkbox" checked=isCompleted name="check" value="check1"}}

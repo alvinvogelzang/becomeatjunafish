@@ -3,10 +3,10 @@
 
 	{{#each lessons}}
 		<div class="lessonProgressOverview">
-			{{#view BecomeTjunaFish.LessonProgressView}}
+			{{#view BecomeTjunaFish.LessonProgressView contentBinding="this"}}
 				<div class="lessonProgressHeader">
-					<h2>{{title}} les</h2>
-					<div class="progressbar" data-value=""></div>
+					<h2>{{title}} les</h2><img {{bind-attr src="img"}}/>
+					<span class="progressPercent">{{progress}}%</span>
 				</div>
 			{{/view}}
 			{{#each topics}}

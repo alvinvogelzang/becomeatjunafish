@@ -1,8 +1,8 @@
 BecomeTjunaFish.Router.map(function () {
   // Add your routes here
   this.resource('index', {path: '/'});
-  this.resource('course', { path: ':course_id'}, function(){
-  	this.resource('lesson', {path: ':lesson_id'}, function(){
+  this.resource('course', { path: 'cursus/:course_id'}, function(){
+  	this.resource('lesson', {path: 'les/:lesson_id'}, function(){
   		this.route('topic', {path: 'topic/:topic_id'});
   		this.route('assignment', {path: 'opdracht/:assignment_id'});
   	});

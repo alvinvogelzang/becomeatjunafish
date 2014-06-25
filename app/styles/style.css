@@ -41,7 +41,7 @@ html, body {
         position: absolute;
         right: -250px;
         background-color: rgba(0,0,0,.4);
-        height: 100%;
+        height: calc(100% + 50px);
         min-height: 100%;
         top: 0;
         bottom: 0;
@@ -181,7 +181,7 @@ html, body {
 		box-sizing: border-box;
 		position: relative;
 		top: 0;
-		box-shadow: 5px 5px 5px #000;
+		box-shadow: 0px 5px 5px #000;
 	}
 
 		.linkToParent {
@@ -317,13 +317,23 @@ html, body {
 					display: block;
 				}
 
-		.courseAvatar { height: 110px; float: left; margin-top: -10px; margin-right: 20px; margin: -10px 20px 0 10px;}
+		.courseAvatar { height: 110px; float: left; margin-top: -10px; margin-right: 20px; margin: -10px 20px 0 10px; opacity: .6;}
 
 
 		.lessonBadge { position: relative; }
 
 			.lessonBadge img {
-    height: 65px;}
+    			height: 65px;
+    			-webkit-filter: grayscale(100%);
+    		}
+
+    		.lessonBadge.completed img {
+    			-webkit-filter: grayscale(0%);
+    		}
+
+    		.lessonBadge span {
+				display: none;
+			}
 
 		.courseGoal { margin-bottom: 50px; font-weight: lighter; color: #CCC;}
 
@@ -425,7 +435,7 @@ html, body {
 			width: 250px;
 			background-image: url('../images/progress_line_vertical.png');
 			margin: 10px 0;
-			height: 100%;
+			height: calc(100% + 50px);
 			padding: 10px 30px;
 			background-repeat: repeat-y;	
 		}
@@ -437,7 +447,7 @@ html, body {
 			.lessonSideColumn span {
 				font-size: 14px;
 				vertical-align: top;
-				color: rgba(255,255,255, .5);
+				color: #CCC;
 				margin-left: 5px;
 				line-height: 20px;
 			}
@@ -487,7 +497,7 @@ html, body {
 					font-family: 'coming soon';
 				}
 
-			.closePopUp {position: absolute;top: 10px;right: 20px; font-size: 30px; cursor: pointer;}
+			.closePopUp {position: absolute;top: 25px;right: 30px; font-size: 30px; cursor: pointer;}
 
 		.topicColumn {
 			width: 600px;
@@ -734,14 +744,15 @@ html, body {
 			    transition: background-color 0.2s ease 0s;
 			    cursor: pointer;
 			    width: auto;
-			    height: 30px;
+			    height: 28px;
 			    font-weight: lighter;
 			    border: medium none;
 			    background-color: #008c9e;
 			    color: #FFF;
-			    line-height: 28px;
+			    line-height: 30px;
 			    margin: 0 auto;
-			    float: left;;;
+			    float: left;
+			    padding: 0 10px;;;
 			}
 
 			.uploadBtn:hover {background-color: #0096a9;}
@@ -823,7 +834,7 @@ html, body {
 		}
 
 			.courseProgress {
-    width: 650px;
+    			width: 650px;
 			}
 
 				.courseProgress h1 {}
@@ -842,8 +853,19 @@ html, body {
 					    padding-bottom: 20px; 
 					}
 
+						.lessonProgressHeader .progressPercent {
+							float: right;
+							line-height: 40px;
+						}
+
 						.lessonProgressHeader h2 {
 							display: inline;
+						}
+
+						.lessonProgressHeader img {
+							height: 35px;
+							vertical-align: bottom;
+							margin-left: 10px;
 						}
 
 						.lessonProgressHeader .progressbar {
@@ -958,8 +980,9 @@ html, body {
 		}
 
 		.ui-progressbar .ui-progressbar-value {
-			margin: 5px;
-			height: 10px;
+			margin: 5px 5px;
+			height: 11px;
+			max-width: 190px;
 		}
 
 		.ui-widget-header {

@@ -69,12 +69,6 @@ BecomeTjunaFish.ProgressRoute = Ember.Route.extend({
     model: function (params) {
         return this.store.find('course', params.course_id);
     }
-    ,
-    redirect: function() {
-      // var firstCourse = this.modelFor('progress').get('firstObject');
-      this.transitionTo('rewards');
-    }
-
 });
 
 

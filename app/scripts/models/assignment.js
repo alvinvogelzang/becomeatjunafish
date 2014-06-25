@@ -11,7 +11,7 @@ BecomeTjunaFish.Assignment.FIXTURES = [
     id: 1,
     title: 'Een basis HTML pagina opzetten',
     intro: "Dit is de inleiding van deze opdracht. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
-    isCompleted: false,
+    isCompleted: true,
     lesson: 1,
     instructions: [1, 2, 3]
   },
@@ -25,9 +25,18 @@ BecomeTjunaFish.Assignment.FIXTURES = [
   },
   {
     id: 3,
-    title: 'Opdracht 3',
+    title: 'Conventies in CSS gebruiken',
+    intro: "Dit is de inleiding van deze opdracht. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
     isCompleted: false,
-    lesson: 1
+    lesson: 3,
+    instructions: [10, 11, 12]
+  },
+  {
+    id: 4,
+    title: 'Bugs opzoeken en rapporteren',
+    intro: "Dit is de inleiding van deze opdracht. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+    isCompleted: true,
+    lesson: 4,
+    instructions: [13,14,15]
   }
 ];
-

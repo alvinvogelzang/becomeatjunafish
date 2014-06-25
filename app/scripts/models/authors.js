@@ -19,5 +19,10 @@ BecomeTjunaFish.Authors.FIXTURES = [
     id: 3,
     name: 'Wim Luiten',
     lesson: 2
+  },
+  {
+    id: 4,
+    name: 'Martijn Duchatteau',
+    lesson: 4
   }
 ];
